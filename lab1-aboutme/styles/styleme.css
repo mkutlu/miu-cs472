@@ -1,10 +1,15 @@
 body {
-    background-color: white;
+    background-color: whitesmoke;
     margin: 0;
     padding: 0;
     color: black;
     font-size: 11pt;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman';
+}
+
+h2,
+h1 {
+    color: chocolate;
 }
 
 .main-container {
@@ -23,7 +28,6 @@ body {
     min-width: 250px;
     text-align: center;
     margin-top: 100px;
-    height: 500px;
 }
 
 .avatar {
@@ -38,9 +42,8 @@ body {
     height: 25px;
 }
 
-.course-details {
+.about-me {
     width: 79%;
-    height: 494px;
     margin-top: 100px;
     border: 3px goldenrod solid;
     border-left: 0px;
