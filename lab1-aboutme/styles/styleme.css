@@ -26,6 +26,14 @@ dt {
     font-weight: bold;
 }
 
+ol {
+    transform: rotate(180deg);
+}
+
+ol>li {
+    transform: rotate(-180deg);
+}
+
 .detail p::first-letter {
     float: left;
     line-height: 0px;
