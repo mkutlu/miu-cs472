@@ -1,10 +1,17 @@
+a {
+    color: red;
+    text-decoration: none;
+}
+
 .signup-container {
     position: relative;
     background-color: #e0e1ff;
-    width: max-content;
+    width: 500px;
     margin: 5px;
     padding: 20px;
+    display: flex;
 }
+
 .signup-header {
     box-shadow: 2px 1px 1px 1px black;
     font-size: 12px;
@@ -16,7 +23,20 @@
 }
 
 .signup-container label {
-    display:inline-block;
+    display: inline-block;
     margin-bottom: 10px;
     font-weight: bold;
+}
+
+.signup-container input, .signup-container select {
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.signup-labels {
+    width: 27%;
+}
+
+.signup-inputs {
+    width: 70%;
 }

@@ -4,7 +4,7 @@ body {
     padding: 0;
     color: black;
     font-size: 11pt;
-    font-family: Georgia, 'Times New Roman';
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 h2,
@@ -36,9 +36,9 @@ ol>li {
 
 .detail p::first-letter {
     float: left;
-    line-height: 0px;
+    line-height: 0;
     font-size: 35px;
-    font-family: Montserrat;
+    font-family: Montserrat, serif;
     color: #4F5472;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -80,7 +80,7 @@ ol>li {
     width: 79%;
     margin-top: 100px;
     border: 3px goldenrod solid;
-    border-left: 0px;
+    border-left: 0;
 }
 
 .detail {
