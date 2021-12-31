@@ -49,3 +49,9 @@ body {
 .detail {
     margin: 20px;
 }
+
+.validator {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
