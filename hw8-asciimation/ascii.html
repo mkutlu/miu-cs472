@@ -8,17 +8,57 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>ASCIImation</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles/ascii.css">
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    <div class="viewer-content">
+        <h1>CS472: ASCII Animation Viewer</h1>
+        <textarea class="viewer" cols="80" rows="20"></textarea>
+        <div class="viewer-controls">
+            <fieldset>
+                <legend>Play Controls:</legend>
+                <button onclick="start();">Start</button>
+                <button onclick="stop();">Stop</button>
+            </fieldset>
+            <fieldset>
+                <legend>Animation:</legend>
+                <select name="animation" id="animation">
+                    <option value=""></option>
+                    <option value="CS472">Exercise</option>
+                    <option value="CS425">Juggler</option>
+                    <option value="CS544">Bike</option>
+                    <option value="CS425">Dive</option>
+                    <option value="CS544">Custom</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Size:</legend>
+                <select name="size" id="size">
+                    <option value="7pt">Tiny</option>
+                    <option value="10pt">Small</option>
+                    <option value="12pt">Medium</option>
+                    <option value="16pt">Large</option>
+                    <option value="24pt">Extra Large</option>
+                    <option value="32pt">XXL</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Speed:</legend>
+                <label>
+                    <input id="turbo" onchange="turbo()" type="checkbox" value="2" name="entry">
+                    Turbo
+                </label>
+            </fieldset>
+        </div>
 
+    </div>
     <script src="" async defer></script>
 </body>
 
