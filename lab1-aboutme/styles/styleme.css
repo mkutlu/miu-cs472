@@ -75,12 +75,17 @@ ol>li {
     right: 10px;
 }
 
-.movies {
+.mood-details {
+    float: left;
+    text-align: center;
+}
+
+.mk-blocks {
     display: flex;
     flex-direction: row;
 }
 
-.movie-block {
+.mk-block {
     background-color: #E3D89F;
     margin: 5px;
     padding: 8px;
@@ -105,7 +110,7 @@ ol>li {
         border-left: 0;
         margin-bottom: 50px;
     }
-    .movies {
+    .mk-blocks {
         flex-direction: column;
     }
     .main-container {

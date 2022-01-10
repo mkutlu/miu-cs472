@@ -7,26 +7,12 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.main-container {
-    width: 70vw;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
+a {
+    color: black;
+    text-decoration: none;
 }
 
-.personal-info {
-    background-color: gold;
-    width: 20%;
-    min-width: 250px;
-    text-align: center;
-    margin-top: 100px;
-    height: 500px;
-}
-
-.personal-info>img {
+.avatar {
     border-radius: 50%;
     width: 200px;
     height: 200px;
@@ -38,14 +24,6 @@ body {
     height: 25px;
 }
 
-.course-details {
-    width: 79%;
-    height: 494px;
-    margin-top: 100px;
-    border: 3px goldenrod solid;
-    border-left: 0px;
-}
-
 .detail {
     margin: 20px;
 }
@@ -54,4 +32,59 @@ body {
     position: absolute;
     bottom: 10px;
     right: 10px;
+}
+
+li::marker {
+    content: "▸";
+    color: #D2228C;
+}
+
+@media (max-width: 800px) {
+    .personal-info {
+        background-color: gold;
+        width: 100%;
+        min-width: 250px;
+        text-align: center;
+        margin-top: 120px;
+    }
+    .course-details {
+        width: 100%;
+        margin-top: 10px;
+        border: 3px goldenrod solid;
+        border-left: 0;
+        margin-bottom: 50px;
+    }
+    .main-container {
+        width: 100vw;
+        margin: 0 auto;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 800px) {
+    .personal-info {
+        background-color: gold;
+        width: 20%;
+        min-width: 250px;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .course-details {
+        width: 79%;
+        margin-top: 100px;
+        border: 3px goldenrod solid;
+        border-left: 0;
+    }
+    .main-container {
+        width: 70vw;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: row;
+    }
 }
