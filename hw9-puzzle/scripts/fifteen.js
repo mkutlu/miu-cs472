@@ -67,4 +67,18 @@ $(function() {
             $(target).css("top", checkTop + 'px');
         }
     }
+
+    $('#shufflebutton').on('click', function(event) {
+        shuffle();
+    });
+
+    function shuffle() {
+        for (var j = 0; j < getRandomArbitrary(0, 50); j++) {
+            $(".puzzlepiece").trigger("click");
+        }
+    }
+
+    function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+    }
 });
