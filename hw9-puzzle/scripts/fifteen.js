@@ -1,6 +1,6 @@
+"use strict";
 $(function() {
     let init = function() {
-        const puzzleArea = $('#puzzlearea');
         const divs = $('#puzzlearea').find('div');
 
         // initialize each piece
@@ -22,8 +22,7 @@ $(function() {
             div.x = x;
             div.y = y;
         }
-    };
-    init();
+    }();
 
     $('body').on('click', '.puzzlepiece', function(event) {
         checkAvailableMove(event.target, false);
@@ -79,7 +78,7 @@ $(function() {
                 self.css('top') === checkTop + 'px';
             return result;
         });
-        checkElement = temp.length > 0 ? temp : undefined;
+        let checkElement = temp.length > 0 ? temp : undefined;
         if (checkTop >= 0 && checkLeft <= 300 && checkLeft >= 0 && checkTop <= 300 && checkElement == undefined) {
             if (!highlight) {
                 $(target).css("left", checkLeft + 'px');
@@ -118,5 +117,5 @@ $(function() {
             $(event.target).css("color", 'black');
             $(event.target).css("border", '5px solid black');
         }
-    }, ".puzzlepiece"); //pass the element as an argument to .on
+    }, ".puzzlepiece");
 });
