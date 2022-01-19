@@ -12,13 +12,13 @@ stop.disabled = true;
 turboElement.disabled = true;
 
 function startInterval(_interval) {
-    intervalId = setInterval(function () {
+    intervalId = setInterval(function() {
         animate();
     }, _interval);
 }
 
 start.addEventListener('click', event => {
-    if(animationElement.value !== '') {
+    if (animationElement.value !== '') {
         start.disabled = true;
         stop.disabled = false;
         turboElement.disabled = false;
@@ -48,7 +48,7 @@ sizeElement.addEventListener('change', (event) => {
 function animate() {
     count++;
     let animation = ANIMATIONS[animationElement.value].split("=====");
-    if(count === animation.length) {
+    if (count >= animation.length) {
         count = 0;
     }
     viewer.textContent = animation[count]
