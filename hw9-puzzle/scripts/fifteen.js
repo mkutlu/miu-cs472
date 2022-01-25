@@ -29,8 +29,8 @@ $(function() {
     });
 
     function checkAvailableMove(target, highlight) {
-        let left = $(target).position().left;
-        let top = $(target).position().top;
+        let left = parseInt($(target).position().left);
+        let top = parseInt($(target).position().top);
 
         let control;
 
