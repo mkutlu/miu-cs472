@@ -1,0 +1,15 @@
+html
+  head
+    title= title
+  body
+    h1= title
+    p= 'Your current score is ' + score
+    p= 'Guess the next number in the sequence.'
+    p= question
+    form(role='form' method='POST' action='/submit-form')
+      div
+        label(for='answer') Your Answer:
+        input#answer(type='text', name='answer')
+        input#number(type="hidden", name="number" value= number)
+        input#score(type="hidden", name="score" value= score)
+      button(type="submit") Submit
