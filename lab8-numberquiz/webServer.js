@@ -19,22 +19,21 @@ const questions = [
 ];
 
 app.get('/', function(req, res) {
-
-    res.render('index', { title: 'The Number Quiz', question: questions[0], number: 0, score: 0 })
+    res.render('index', { title: 'The Number Quiz', question: questions[0], number: 0, score: 0, hidden: true, hiddenResult: false })
 })
 app.post('/submit-form', (req, res) => {
     const number = parseInt(req.body.number)
     const answer = parseInt(req.body.answer)
     let score = req.body.score
-    console.log(number)
-    console.log(answer)
-    console.log(score)
     const answers = [8, 36, 13, 32];
     if (answer === answers[number]) {
         score++
     }
-    res.render('index', { title: 'The Number Quiz', score: score, question: questions[number + 1], number: number + 1 })
-        //res.end()
+    if (number === 3) {
+        res.render('index', { title: 'The Number Quiz', score: score, question: questions[number + 1], number: number + 1, hidden: false, hiddenResult: true })
+    } else {
+        res.render('index', { title: 'The Number Quiz', score: score, question: questions[number + 1], number: number + 1, hidden: true, hiddenResult: false })
+    }
 })
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
