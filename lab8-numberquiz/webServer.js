@@ -12,6 +12,7 @@ app.set("view engine", "pug");
 app.set('views', path.join(__dirname, "./public/views")); // use pug templates file in /public/views subdirectory
 
 const questions = [
+    "1, 2, 3, 4, 5", //easy
     "1, 1, 2, 3, 5", //fibonacci
     "1, 4, 9, 16, 25", //squares
     "2, 3, 5, 7, 11", //primes
@@ -25,11 +26,11 @@ app.post('/submit-form', (req, res) => {
     const number = parseInt(req.body.number)
     const answer = parseInt(req.body.answer)
     let score = req.body.score
-    const answers = [8, 36, 13, 32];
+    const answers = [6, 8, 36, 13, 32];
     if (answer === answers[number]) {
         score++
     }
-    if (number === 3) {
+    if (number === 4) {
         res.render('index', { title: 'The Number Quiz', score: score, question: questions[number + 1], number: number + 1, hidden: false, hiddenResult: true })
     } else {
         res.render('index', { title: 'The Number Quiz', score: score, question: questions[number + 1], number: number + 1, hidden: true, hiddenResult: false })
